@@ -18,7 +18,7 @@ set $menu wofi --show drun
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg /home/alekks/pictures/art/other/knifeineye.png fill
-#
+
 # Example configuration:
 #
 output DP-3 resolution 2560x1440 position 1920,0
