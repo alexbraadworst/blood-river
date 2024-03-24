@@ -17,7 +17,7 @@ set $menu wofi --show drun
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/alekks/pictures/art/other/knifeineye.png fill
+output * bg /home/alekks/pictures/ascii/hoshinoai.png fill
 
 # Example configuration:
 #

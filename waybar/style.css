@@ -11,7 +11,7 @@
 }
 
 window#waybar {
-    background-color: rgba(20, 21, 27, 0.75);
+    background-color: rgba(20, 21, 27, 0.3);
     /*border-bottom: 3px solid rgba(125, 125, 125, 0);*/
     color: #ffffff;
     transition-property: background-color;
@@ -25,7 +25,7 @@ window#waybar.hidden {
 
 #workspaces button {
     padding: 0 0.7em;
-    background-color: transparent;
+    background-color: rgba(20, 21, 27, 0.4);
     color: #ffffff;
     margin-top: 0px;
     /*border-radius: 5px;*/
@@ -39,8 +39,8 @@ window#waybar.hidden {
 
 }
 
-#workspaces button.active {
-    background-color: rgba(68, 71, 90, 1);
+#workspaces button.focused {
+    background-color: rgba(20, 21, 27, 1);
     /*border-bottom: 3px solid #ffffff;*/
 }
 
@@ -69,7 +69,10 @@ window#waybar.hidden {
 #idle_inhibitor,
 #scratchpad,
 
-#window,
+#window {
+    background-color: rgba(20, 21, 27, 0.75);
+    padding: 0 5px;
+}
 
 #workspaces {
     margin: 0 4px;
@@ -87,36 +90,36 @@ window#waybar.hidden {
 }
 */
 #clock {
-    background-color: rgba(40, 42, 54, 1);
+    background-color: rgba(20, 21, 27, 0.75);
     padding: 0 5px;
     /*border-bottom: 3px solid rgba(125, 125, 125, 1);*/
 }
 
 label:focus {
-    background-color: rgba(40, 42, 54, 1);
+    background-color: rgba(20, 21, 27, 0.75);
     /*border-bottom: 3px solid rgba(125, 125, 125, 1);*/
 }
 
 #cpu {
-    background-color: rgba(40, 42, 54, 1);
+    background-color: rgba(20, 21, 27, 0.75);
     padding: 0 5px;
     /*border-bottom: 3px solid rgba(125, 125, 125, 1);*/
 }
 
 #memory {
-    background-color: rgba(40, 42, 54, 1);
+    background-color: rgba(20, 21, 27, 0.75);
     padding: 0 5px;
     /*border-bottom: 3px solid rgba(125, 125, 125, 1);*/
 }
 
 #pulseaudio {
-    background-color: rgba(40, 42, 54, 1);
+    background-color: rgba(20, 21, 27, 0.75);
     padding: 0 5px;
     /*border-bottom: 3px solid rgba(125, 125, 125, 1);*/
 }
 
 #keyboard-state {
-    background-color: rgba(40, 42, 54, 1);
+    background-color: rgba(20, 21, 27, 0.75);
     padding: 0 5px;
     margin-right: 3px;
     
