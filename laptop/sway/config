@@ -219,8 +219,9 @@ bindsym Print exec grimshot save output
 
 include /etc/sway/config.d/*
 # Autolaunch:
-#exec gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-Dark'
-#exec gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+exec gsettings set org.gnome.desktop.interface gtk-theme 'Dracula'
+exec gsettings set org.gnome.desktop.wm.preferences theme 'Dracula'
+
 exec_always pipewire
 #exec_always pkill waybar && waybar
 exec_always waybar
