@@ -1,3 +1,4 @@
-#alias sway="dbus-run-session sway"
-alias n3='n -d'
-
+alias n3='n -de'
+alias nd='mkdir'
+alias spotifyd='spotifyd --no-daemon & disown'
+alias pv='sudo protonvpn'
