@@ -1,4 +1,9 @@
+#alias sway="dbus-run-session sway"
 alias n3='n -de'
 alias nd='mkdir'
 alias spotifyd='spotifyd --no-daemon & disown'
 alias pv='sudo protonvpn'
+alias ml='sudo ls /etc/wireguard'
+alias mc='wg-quick up'
+alias md='wg-quick down'
+alias htop='htop -t'
