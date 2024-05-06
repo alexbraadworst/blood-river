@@ -1,6 +1,7 @@
 syntax enable
 set number
 set clipboard=unnamedplus
+
 call plug#begin()
 Plug 'nvim-lualine/lualine.nvim'
 " If you want to have icons in your statusline choose one of these

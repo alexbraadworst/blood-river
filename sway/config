@@ -223,10 +223,10 @@ include /etc/sway/config.d/*
 # Autolaunch:
 #exec dbus-daemon --session --address=unix:path=$XDG_RUNTIME_DIR/bus
 exec /usr/bin/lxpolkit
-exec /usr/lib/pentablet/PenTablet.sh /mini
+#exec /usr/lib/pentablet/PenTablet.sh /mini
 exec gsettings set org.gnome.desktop.interface gtk-theme 'Dracula'
 exec gsettings set org.gnome.desktop.wm.preferences theme 'Dracula'
-exec_always pipewire
+#exec_always pipewire
 #exec_always pkill waybar && waybar
 exec_always waybar
 
