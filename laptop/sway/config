@@ -202,17 +202,16 @@ client.urgent #BD93F9 #BD93F9  #F8F8F2 #BD93F9 #FF5555
 
 
 #Custom keybinds
-
-
+bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 #Media Keys, other bindsyms
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +1%
+bindsym Shift+XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -1%
+bindsym Shift+XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
-bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
-bindsym XF86Search exec firefox
+bindsym XF86Search exec librewolf
 #Screenshotting
 bindsym Ctrl+Print exec grimshot copy area
 bindsym Print exec grimshot save output
@@ -222,6 +221,4 @@ include /etc/sway/config.d/*
 exec gsettings set org.gnome.desktop.interface gtk-theme 'Dracula'
 exec gsettings set org.gnome.desktop.wm.preferences theme 'Dracula'
 
-exec_always pipewire
-#exec_always pkill waybar && waybar
 exec_always waybar
