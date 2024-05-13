@@ -205,8 +205,8 @@ client.urgent #BD93F9 #BD93F9  #F8F8F2 #BD93F9 #FF5555
 bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 #Media Keys, other bindsyms
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +1%
-bindsym Shift+XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym Shift+XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +1%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -1%
 bindsym Shift+XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
@@ -220,5 +220,5 @@ include /etc/sway/config.d/*
 # Autolaunch:
 exec gsettings set org.gnome.desktop.interface gtk-theme 'Dracula'
 exec gsettings set org.gnome.desktop.wm.preferences theme 'Dracula'
-
+exec /usr/bin/lxpolkit
 exec_always waybar
