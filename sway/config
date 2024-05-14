@@ -206,10 +206,10 @@ client.urgent #BD93F9 #BD93F9  #F8F8F2 #BD93F9 #FF5555
 
 #Media Keys
 
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +1%
-bindsym Shift+XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -1%
-bindsym Shift+XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym Shift+XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +1%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym Shift+XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -1%
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
@@ -223,7 +223,7 @@ include /etc/sway/config.d/*
 # Autolaunch:
 #exec dbus-daemon --session --address=unix:path=$XDG_RUNTIME_DIR/bus
 exec /usr/bin/lxpolkit
-#exec /usr/lib/pentablet/PenTablet.sh /mini
+exec /usr/lib/pentablet/PenTablet.sh /mini
 exec gsettings set org.gnome.desktop.interface gtk-theme 'Dracula'
 exec gsettings set org.gnome.desktop.wm.preferences theme 'Dracula'
 #exec_always pipewire
