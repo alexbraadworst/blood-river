@@ -6,9 +6,6 @@
 # Drop capabilities that browsers don’t need
 caps.drop all
 
-# Disable ptrace and other debugging
-seccomp
-
 # Hide USB devices and other hardware
 nodvd
 no3d
@@ -19,9 +16,6 @@ private-dev
 
 # Read-only access to /usr (system binaries)
 read-only /usr
-
-# Enable seccomp with default profile
-seccomp
 
 # Deny access to /proc/kcore and other sensitive files
 blacklist /proc/kcore
