@@ -59,8 +59,34 @@ mem_total=$(free -m | awk '/Mem:/ {print $2}')
 mem_percent=$(( 100 * mem_used / mem_total ))
 
 # Battery or charger
-battery_charge=$(cat /sys/class/power_supply/BAT0/capacity)
-battery_status=$(cat /sys/class/power_supply/BAT0/status)
+# Only one battery
+# battery_charge=$(cat /sys/class/power_supply/BAT0/capacity)
+# battery_status=$(cat /sys/class/power_supply/BAT0/status)
+
+# Dual battery
+bats=(/sys/class/power_supply/BAT*)
+
+total_now=0
+total_full=0
+for bat in "${bats[@]}"; do
+    now=$(<"$bat/energy_now")
+    full=$(<"$bat/energy_full")
+    total_now=$((total_now + now))
+    total_full=$((total_full + full))
+done
+
+battery_charge=$(( 100 * total_now / total_full ))
+
+battery_status="Unknown"
+for bat in /sys/class/power_supply/BAT*; do
+    st=$(<"$bat/status")
+    if [[ $st == "Charging" ]]; then
+        battery_status="Charging"
+        break
+    elif [[ $st == "Discharging" ]]; then
+        battery_status="Discharging"
+    fi
+done
 
 
 echo "| down ${rx_kbps}KB/s up ${tx_kbps}KB/s | cpu ${cpu_usage}% | mem ${mem_percent}% | vol ${volume}% | $battery_status ${battery_charge}% | $date_formatted |"
